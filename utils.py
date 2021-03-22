@@ -1,7 +1,13 @@
 from datetime import datetime
 
 def clean_string(str):
-    return str.replace("%20", " ").replace("%3A", ":")
+    if(str != None):
+        return str.replace("%20", " ").replace("%3A", ":")
+
+    return ""
 
 def string_to_date(str):
-    return datetime.strptime(str, "%Y-%m-%d %H:%M:%S")
+    if(str != ""):
+        return datetime.strptime(str, "%Y-%m-%d %H:%M:%S")
+
+    return ""
