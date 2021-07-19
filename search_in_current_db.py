@@ -1,4 +1,4 @@
-import psycopg2
+import psycopg
 
 class SearchInCurrentDb:
   def __init__(self, dbname, user, host, password, port):
@@ -9,7 +9,7 @@ class SearchInCurrentDb:
     self.__port = port
 
   def search(self):
-    conn = psycopg2.connect(
+    conn = psycopg.connect(
       dbname = self.__dbname,
       user = self.__user,
       host = self.__host,

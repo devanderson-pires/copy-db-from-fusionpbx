@@ -1,4 +1,4 @@
-import psycopg2
+import psycopg
 from search_in_current_db import SearchInCurrentDb
 from utils import clean_string, string_to_date
 
@@ -10,8 +10,8 @@ list_of_json = []
 for json_file in tuple_of_json:
   list_of_json.extend(json_file)
   
-conn = psycopg2.connect(
-  dbname = "bancoteste",
+conn = psycopg.connect(
+  dbname = "allowdb",
   user = "postgres",
   host = "127.0.0.1",
   password = "11223344",
